@@ -1,0 +1,32 @@
+{
+  "app": "EncyAuth | Trình xác thực 2 bước",
+  "id": "encyauth-pwa",
+  "website": "https://encypass.github.io/",
+  "author": "Hoàng Đợi",
+  "latest": {
+    "version": "v1.0.1",
+    "release_date": "2026-09-30",
+    "summary": "Bản cập nhật tối ưu hóa hiệu năng, cải tiến giao diện hiển thị mã 2FA và hoàn thiện toàn bộ cơ chế hoạt động ngoại tuyến."
+  },
+  "changelog": [
+    {
+      "version": "v1.0.1",
+      "release_date": "2026-09-30",
+      "changes": [
+        "Tối ưu hóa hiển thị mã TOTP: Nâng cấp giao diện hiển thị mã xác thực 2 bước với định dạng chữ số lớn, rõ ràng và dễ nhìn hơn.",
+        "Cải thiện hiệu năng Service Worker: Tinh chỉnh cơ chế cache và quản lý bộ nhớ đệm giúp ứng dụng tải nhanh hơn khi ngoại tuyến.",
+        "Sửa lỗi nhỏ: Khắc phục các vấn đề liên quan đến việc đồng bộ trạng thái chờ (Loader) và tối ưu hóa trải nghiệm trên các dòng điện thoại di động màn hình nhỏ."
+      ]
+    },
+    {
+      "version": "v1.0.0",
+      "release_date": "2026-09-25",
+      "changes": [
+        "Kiến trúc bảo mật Zero-Knowledge: Khóa bí mật (Secret Key) được mã hóa AES-256 an toàn ngay trên thiết bị bằng Mật khẩu chính trước khi đồng bộ lên đám mây.",
+        "Tích hợp sinh mã TOTP: Hỗ trợ tạo mã xác thực 2 bước chuẩn xác theo thời gian thực nhờ tích hợp thư viện OTPAuth mạnh mẽ.",
+        "Hoạt động ngoại tuyến 100%: Cho phép xem và sinh mã 2FA mượt mà ngay cả khi thiết bị mất kết nối mạng hoàn toàn.",
+        "Trải nghiệm PWA hoàn chỉnh: Hỗ trợ cài đặt trực tiếp vào màn hình chính điện thoại (Android & iOS) với đầy đủ Service Worker và Manifest."
+      ]
+    }
+  ]
+}

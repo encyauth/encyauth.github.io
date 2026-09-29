@@ -1,0 +1,63 @@
+{
+  "name": "EncyAuth - Trình xác thực 2 bước",
+  "short_name": "EncyAuth",
+  "id": "/",
+  "start_url": "/?source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0d9488",
+  "theme_color": "#0d9488",
+  "description": "Trình xác thực 2 bước (2FA/TOTP) hoạt động offline, mã hóa AES-256 bằng Mật khẩu chính. Lưu trữ dữ liệu an toàn, hỗ trợ thêm/sửa/xóa mã 2FA, sao lưu/khôi phục dữ liệu và cài đặt trên Android & iOS.",
+  "lang": "vi-VN",
+  "dir": "ltr",
+  "categories": ["productivity", "security", "utilities"],
+
+  "icons": [
+    { "src": "icons/icon-32.png",   "sizes": "32x32",   "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-72.png",   "sizes": "72x72",   "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-96.png",   "sizes": "96x96",   "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-128.png",  "sizes": "128x128", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-144.png",  "sizes": "144x144", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-152.png",  "sizes": "152x152", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-167.png",  "sizes": "167x167", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-180.png",  "sizes": "180x180", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-192.png",  "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-384.png",  "sizes": "384x384", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png",  "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-1024.png", "sizes": "1024x1024", "type": "image/png", "purpose": "any" },
+
+    { "src": "icons/maskable-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+
+  "shortcuts": [
+    {
+      "name": "Thêm mã 2FA mới",
+      "short_name": "Thêm mã 2FA",
+      "description": "Mở nhanh màn hình thêm mã xác thực 2 bước mới.",
+      "url": "/?action=new",
+      "icons": [
+        { "src": "icons/add.png", "sizes": "96x96", "type": "image/png", "purpose": "any" }
+      ]
+    },
+    {
+      "name": "Tìm kiếm dịch vụ",
+      "short_name": "Tìm kiếm",
+      "description": "Mở nhanh hộp tìm kiếm dịch vụ 2FA.",
+      "url": "/?action=search",
+      "icons": [
+        { "src": "icons/search.png", "sizes": "96x96", "type": "image/png", "purpose": "any" }
+      ]
+    },
+    {
+      "name": "Sao lưu dữ liệu",
+      "short_name": "Sao lưu",
+      "description": "Xuất file sao lưu mã xác thực 2FA.",
+      "url": "/?action=backup",
+      "icons": [
+        { "src": "icons/backup.png", "sizes": "96x96", "type": "image/png", "purpose": "any" }
+      ]
+    }
+  ]
+}
