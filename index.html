@@ -504,6 +504,15 @@
         activeDEKKey = null; 
         if (inactivityTimer) clearTimeout(inactivityTimer);
         
+        // Xóa bộ nhớ cache tên đã giải mã để không bị hiển thị sau khi khóa
+        data.forEach(item => {
+            delete item.decryptedDisplay;
+        });
+
+        // Đóng các modal chứa dữ liệu nhạy cảm nếu đang mở
+        openEdit(false);
+        openCK(false);
+        
         Object.keys(visible).forEach(id => {
             if (visible[id]) {
                 visible[id] = false;
@@ -1267,14 +1276,17 @@
       for (const e of data) {
           if (e[CHECK_KEY]) continue; 
           
-          let displayTitle = e.decryptedDisplay || "[Dữ liệu mã hóa]";
-          if (activeDEKKey && e.display && !e.decryptedDisplay) {
-              try {
-                  e.decryptedDisplay = await SecureCrypto.decryptWithDEK(e.display, activeDEKKey) || "[Lỗi giải mã]";
-                  displayTitle = e.decryptedDisplay;
-              } catch (err) {
-                  displayTitle = "[Lỗi giải mã]";
+          let displayTitle = "[Dữ liệu mã hóa]";
+          
+          if (activeDEKKey) {
+              if (e.display && !e.decryptedDisplay) {
+                  try {
+                      e.decryptedDisplay = await SecureCrypto.decryptWithDEK(e.display, activeDEKKey) || "[Lỗi giải mã]";
+                  } catch (err) {
+                      e.decryptedDisplay = "[Lỗi giải mã]";
+                  }
               }
+              displayTitle = e.decryptedDisplay || displayTitle;
           }
 
           if (q) {
@@ -2058,6 +2070,9 @@
                         }
                         await batch.commit();
                         activeDEKKey = null; if (typeof updateLockUI === 'function') updateLockUI();
+                        
+                        toggleLoader(false, 'import_cloud');
+
                         elCloud.modal.classList.remove('open');
                         showToast('Dữ liệu từ Cloud Storage đã được khôi phục thành công!', 'success');
                     } catch (e) { 
