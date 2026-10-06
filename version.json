@@ -4,11 +4,19 @@
   "website": "https://encypass.github.io/",
   "author": "Hoàng Đợi",
   "latest": {
-    "version": "v1.0.1",
-    "release_date": "2026-09-30",
-    "summary": "Bản cập nhật tối ưu hóa hiệu năng, cải tiến giao diện hiển thị mã 2FA và hoàn thiện toàn bộ cơ chế hoạt động ngoại tuyến."
+    "version": "v1.0.2",
+    "release_date": "2026-10-06",
+    "summary": "Bản cập nhật nâng cấp bảo mật toàn diện, tối ưu hóa hiệu suất hệ thống và cải thiện trải nghiệm người dùng."
   },
   "changelog": [
+    {
+      "version": "v1.0.2",
+      "release_date": "2026-10-06",
+      "changes": [
+        "Nâng cấp bảo mật: Tăng cường số vòng lặp PBKDF2 (iterations) nhằm tối ưu hóa khả năng chống brute-force cho Mật khẩu chính.",
+        "Tối ưu hóa hiệu suất: Cải tiến tốc độ giải mã dữ liệu và dọn dẹp bộ nhớ đệm hiệu quả hơn, giúp ứng dụng mượt mà hơn khi thao tác số lượng lớn tài khoản."
+      ]
+    },
     {
       "version": "v1.0.1",
       "release_date": "2026-09-30",

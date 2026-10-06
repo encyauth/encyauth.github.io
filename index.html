@@ -22,7 +22,7 @@
   <meta property="og:image" content="https://encyauth.github.io/icons/icon-512.png">
 
   <meta name="theme-color" content="#0d9488">
-  <meta name="version" content="v1.0.1">
+  <meta name="version" content="v1.0.2">
 
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -63,7 +63,7 @@
         </div>
       </div>
       <h2 class="text-2xl font-bold mb-2">EncyAuth</h2>
-      <p class="text-sm text-slate-300 mb-8">Vui lòng đăng nhập bằng tài khoản Google đã được cấp quyền truy cập.</p>
+      <p class="text-sm text-slate-300 mb-8">Vui lòng đăng nhập bằng tài khoản Google đã được cấp quyền.</p>
       
       <button id="btnGoogleLogin" class="w-full py-3.5 bg-white text-slate-900 rounded-xl font-bold flex items-center justify-center gap-3 active:scale-95 transition-transform">
         <svg class="w-5 h-5" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
@@ -82,7 +82,7 @@
 		<img src="/icons/icon-192.png" alt="EncyAuth Logo" class="w-full h-full block rounded-[24%] drop-shadow-md">
 	</div>
     <div class="font-black text-[20px] mt-3 tracking-wide">EncyAuth</div>
-    <div class="opacity-80 mt-1.5 text-sm">Phiên bản: <b id="splashVersion">v1.0.1</b></div>
+    <div class="opacity-80 mt-1.5 text-sm">Phiên bản: <b id="splashVersion">v1.0.2</b></div>
   </div>
 
   <div class="max-w-md mx-auto bg-slate-50 min-h-screen pb-24 relative shadow-2xl overflow-hidden">
@@ -102,7 +102,7 @@
             <button id="btn-install" class="hidden header-btn !bg-amber-500 !border-amber-400 text-slate-950 animate-pulse" title="Cài đặt ứng dụng">
                 <i data-lucide="download" class="w-4 h-4"></i>
             </button>
-            <button id="btn-lock" class="hidden header-btn transition-all duration-300" title="Khóa/Mở khóa kho dữ liệu">
+            <button id="btn-lock" class="hidden header-btn transition-all duration-300" title="Khóa/Mở khóa Kho dữ liệu">
                 <i data-lucide="lock" class="w-4 h-4"></i>
             </button>
             <button id="btn-logout" class="header-btn" title="Đăng xuất khỏi thiết bị">
@@ -114,7 +114,7 @@
       <div class="relative w-3/4 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent mx-auto mb-4"></div>
       
       <div class="relative flex flex-col items-center mb-3 text-center">
-        <p class="text-teal-100/75 text-[10px] uppercase tracking-[0.2em] font-bold mb-1">Mã xác thực 2FA</p>
+        <p class="text-teal-100/75 text-[10px] uppercase tracking-[0.2em] font-bold mb-1">Tài khoản 2FA đã lưu</p>
         <div class="flex items-baseline gap-1.5">
            <h1 id="statCount" class="text-4xl font-black tracking-tighter drop-shadow-sm">0</h1>
         </div>
@@ -131,7 +131,7 @@
         <div class="search">
           <div class="relative w-full">
             <i data-lucide="search" class="absolute left-3.5 top-1/2 -translate-y-1/2 w-[18px] h-[18px] text-slate-400"></i>
-            <input id="search" type="search" placeholder="Tìm kiếm dịch vụ..." autocomplete="off" class="w-full pl-[42px] pr-3 py-2.5 border border-slate-200 rounded-xl text-[15px] bg-white outline-none transition-all focus:border-teal-500 focus:ring-[3px] focus:ring-teal-500/10 min-h-[48px]">
+            <input id="search" type="search" placeholder="Tìm kiếm dịch vụ, ứng dụng..." autocomplete="off" class="w-full pl-[42px] pr-3 py-2.5 border border-slate-200 rounded-xl text-[15px] bg-white outline-none transition-all focus:border-teal-500 focus:ring-[3px] focus:ring-teal-500/10 min-h-[48px]">
           </div>
         </div>
       </section>
@@ -143,7 +143,7 @@
 
     <nav class="fixed bottom-0 left-0 right-0 max-w-md mx-auto bg-white/20 backdrop-blur border-t-[2px] border-t-teal-600 border-x-0 border-b-0 px-6 py-2.5 flex justify-between items-center z-40 rounded-t-[24px]">
       <button id="nav-home" class="text-teal-600 p-2 transition-all hover:scale-110 active:scale-95" title="Trang chính"><i data-lucide="clipboard-list"></i></button>
-      <button id="miAdd" class="bg-teal-600 p-4 rounded-2xl -mt-10 shadow-xl shadow-teal-300 border-2 border-white text-white active:scale-90 transition-all hover:bg-teal-700" title="Thêm mã 2FA"><i data-lucide="plus" class="w-6 h-6"></i></button>
+      <button id="miAdd" class="bg-teal-600 p-4 rounded-2xl -mt-10 shadow-xl shadow-teal-300 border-2 border-white text-white active:scale-90 transition-all hover:bg-teal-700" title="Thêm tài khoản 2FA"><i data-lucide="plus" class="w-6 h-6"></i></button>
       <button id="btnOpenMenu" class="text-slate-400 hover:text-teal-600 p-2 transition-all hover:scale-110 active:scale-95" title="Công cụ"><i data-lucide="layout-grid"></i></button>
     </nav>
 
@@ -166,12 +166,12 @@
           </button>
           <button id="miCloudBackup" class="menu-btn">
             <div class="p-3 rounded-2xl bg-sky-100/50 text-sky-600"><i data-lucide="cloud" class="w-6 h-6"></i></div>
-            <span>Quản lý Cloud</span>
+            <span>Dữ liệu Cloud Storage</span>
           </button>
 
           <button id="miChangeKey" class="menu-btn">
             <div class="p-3 rounded-2xl bg-amber-100/50 text-amber-600"><i data-lucide="shield-check" class="w-6 h-6"></i></div>
-            <span>Đổi khóa chính</span>
+            <span>Đổi Mật khẩu chính</span>
           </button>
           <button id="miInstall" class="menu-btn" style="display:none">
             <div class="p-3 rounded-2xl bg-purple-100/50 text-purple-600"><i data-lucide="smartphone" class="w-6 h-6"></i></div>
@@ -195,7 +195,7 @@
     <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="editTitle">
       <div class="modal-drag-handle"></div>
       <div class="modal-head">
-        <h3 id="editTitle" class="modal-title"><i data-lucide="edit-3" class="w-5 h-5 text-teal-600"></i> Thêm mã 2FA</h3>
+        <h3 id="editTitle" class="modal-title"><i data-lucide="edit-3" class="w-5 h-5 text-teal-600"></i> Thêm tài khoản 2FA</h3>
         <button id="editX" class="modal-close" aria-label="Đóng"><i data-lucide="x" class="w-5 h-5"></i></button>
       </div>
       <div class="modal-body">
@@ -218,19 +218,19 @@
           <div class="form-row sm:col-span-2">
             <label>Mật khẩu chính</label>
             <div class="row" style="position: relative;">
-              <input id="fMaster" class="modal-input" type="password" style="width: 100%; padding-right: 44px; box-sizing: border-box;" autocomplete="new-password" spellcheck="false" placeholder="Dùng để mã hóa và bảo vệ tài khoản này">
+              <input id="fMaster" class="modal-input" type="password" style="width: 100%; padding-right: 44px; box-sizing: border-box;" autocomplete="new-password" spellcheck="false" placeholder="Dùng để mã hóa và bảo vệ toàn bộ dữ liệu">
               <button type="button" class="toggle-password flex items-center justify-center text-slate-400 hover:text-teal-600 transition-colors" style="position: absolute; right: 6px; top: 50%; transform: translateY(-50%); width: 32px; height: 32px; border-radius: 8px; border: none; background: transparent; cursor: pointer; outline: none;">
                 <i data-lucide="eye" style="width: 18px; height: 18px; pointer-events: none;"></i>
               </button>
             </div>
             <small id="strengthMsg" class="small mt-1" style="display:none"></small>
-            <small id="errMaster" class="text-rose-500 font-medium text-[12px] mt-1 hidden items-center gap-1"><i data-lucide="alert-circle" class="w-3 h-3"></i> Vui lòng nhập mật khẩu chính</small>
+            <small id="errMaster" class="text-rose-500 font-medium text-[12px] mt-1 hidden items-center gap-1"><i data-lucide="alert-circle" class="w-3 h-3"></i> Vui lòng nhập Mật khẩu chính</small>
           </div>
 
           <div class="form-row sm:col-span-2" id="masterConfirmRow" style="display:none">
-            <label>Xác nhận mật khẩu chính</label>
+            <label>Xác nhận Mật khẩu chính</label>
             <div class="row" style="position: relative;">
-              <input id="fMasterConfirm" class="modal-input" type="password" style="width: 100%; padding-right: 44px; box-sizing: border-box;" autocomplete="new-password" spellcheck="false" placeholder="Nhập lại mật khẩu chính">
+              <input id="fMasterConfirm" class="modal-input" type="password" style="width: 100%; padding-right: 44px; box-sizing: border-box;" autocomplete="new-password" spellcheck="false" placeholder="Nhập lại Mật khẩu chính">
               <button type="button" class="toggle-password flex items-center justify-center text-slate-400 hover:text-teal-600 transition-colors" style="position: absolute; right: 6px; top: 50%; transform: translateY(-50%); width: 32px; height: 32px; border-radius: 8px; border: none; background: transparent; cursor: pointer; outline: none;">
                 <i data-lucide="eye" style="width: 18px; height: 18px; pointer-events: none;"></i>
               </button>
@@ -270,21 +270,25 @@
             </div>
             
             <p class="mb-4 text-[14px] text-slate-600 leading-relaxed">
-              EncyAuth là ứng dụng giúp bạn lưu trữ và tạo mã xác thực 2 bước (2FA/TOTP) an toàn. Được xây dựng dựa trên kiến trúc Zero-Knowledge, toàn bộ dữ liệu mã bí mật của bạn sẽ được mã hóa trực tiếp trên thiết bị.
+              EncyAuth là ứng dụng giúp bạn lưu trữ và tạo mã xác thực 2 bước (2FA/TOTP) an toàn. Được xây dựng dựa trên kiến trúc Zero-Knowledge, toàn bộ dữ liệu của bạn sẽ được mã hóa trực tiếp trên thiết bị trước khi đồng bộ lên Cloud Storage. Điều này đảm bảo không một ai — kể cả nhà phát triển — có thể giải mã và đọc được thông tin của bạn.
             </p>
 
             <ul class="about-features">
               <li>
                 <span class="about-bullet"><i data-lucide="shield-check" class="w-3 h-3"></i></span>
-                <span><strong>Bảo mật cấp cao:</strong> Công nghệ khóa dữ liệu (DEK) mã hóa toàn bộ Secret Key.</span>
+                <span><strong>Bảo mật cấp cao:</strong> Ứng dụng công nghệ khóa dữ liệu (DEK) với tiêu chuẩn mã hóa tiên tiến nhất. Toàn bộ mã bí mật đều được khóa.</span>
               </li>
               <li>
                 <span class="about-bullet"><i data-lucide="cloud-cog" class="w-3 h-3"></i></span>
-                <span><strong>Hoạt động ngoại tuyến:</strong> Sinh mã TOTP 6 số mượt mà ngay cả khi không có mạng.</span>
+                <span><strong>Hoạt động ngoại tuyến:</strong> Sinh mã TOTP 6 số mượt mà và an toàn ngay cả khi thiết bị mất kết nối mạng.</span>
+              </li>
+              <li>
+                <span class="about-bullet"><i data-lucide="lock" class="w-3 h-3"></i></span>
+                <span><strong>Chống truy cập trái phép:</strong> Tự động khóa bảo vệ hệ thống nếu phát hiện nhập sai mật khẩu nhiều lần.</span>
               </li>
               <li>
                 <span class="about-bullet !text-rose-600 !bg-rose-100"><i data-lucide="alert-triangle" class="w-3 h-3"></i></span>
-                <span class="!text-rose-800"><strong>Cảnh báo quan trọng:</strong> Hệ thống không lưu trữ <i>Mật khẩu chính</i>. Nếu quên, bạn sẽ vĩnh viễn mất quyền truy cập vào dữ liệu.</span>
+                <span class="!text-rose-800"><strong>Cảnh báo quan trọng:</strong> Hệ thống không lưu trữ <i>Mật khẩu chính</i>. Nếu quên, bạn sẽ vĩnh viễn mất quyền truy cập vào dữ liệu của mình.</span>
               </li>
             </ul>
           </div>
@@ -321,7 +325,7 @@
     <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="ckTitle">
       <div class="modal-drag-handle"></div>
       <div class="modal-head">
-        <h3 id="ckTitle" class="modal-title"><i data-lucide="shield-alert" class="w-5 h-5 text-amber-500"></i> Đổi mật khẩu chính</h3>
+        <h3 id="ckTitle" class="modal-title"><i data-lucide="shield-alert" class="w-5 h-5 text-amber-500"></i> Đổi Mật khẩu chính</h3>
         <button id="ckX" class="modal-close" aria-label="Đóng"><i data-lucide="x" class="w-5 h-5"></i></button>
       </div>
       <div class="modal-body">
@@ -329,7 +333,7 @@
           <div class="form-row sm:col-span-2">
             <label>Mật khẩu hiện tại</label>
             <div class="row" style="position: relative;">
-              <input id="ckOld" class="modal-input" type="password" style="width: 100%; padding-right: 44px; box-sizing: border-box;" autocomplete="new-password" spellcheck="false" placeholder="Nhập mật khẩu chính hiện tại">
+              <input id="ckOld" class="modal-input" type="password" style="width: 100%; padding-right: 44px; box-sizing: border-box;" autocomplete="new-password" spellcheck="false" placeholder="Nhập Mật khẩu chính hiện tại">
               <button type="button" class="toggle-password flex items-center justify-center text-slate-400 hover:text-teal-600 transition-colors" style="position: absolute; right: 6px; top: 50%; transform: translateY(-50%); width: 32px; height: 32px; border-radius: 8px; border: none; background: transparent; cursor: pointer; outline: none;">
                 <i data-lucide="eye" style="width: 18px; height: 18px; pointer-events: none;"></i>
               </button>
@@ -382,7 +386,7 @@
 		</div>
           <div>
             <div class="font-extrabold text-[16px]">Trình xác thực 2 bước</div>
-            <div class="small text-slate-500 mt-1">Thêm vào màn hình chính để truy cập nhanh chóng và mượt mà hơn.</div>
+            <div class="small text-slate-500 mt-1">Cài đặt ứng dụng để sử dụng ngoại tuyến (offline) nhanh chóng và mượt mà hơn.</div>
           </div>
         </div>
         <div id="iosTip" class="small mt-4 p-4 rounded-xl bg-teal-50 border border-teal-100 text-teal-800" style="display:none;">
@@ -415,7 +419,7 @@
     <div class="modal-card" role="dialog" aria-modal="true">
       <div class="modal-drag-handle"></div>
       <div class="modal-head">
-        <h3 class="modal-title"><i data-lucide="cloud" class="w-5 h-5 text-sky-500"></i> Dữ liệu trên Cloud</h3>
+        <h3 class="modal-title"><i data-lucide="cloud" class="w-5 h-5 text-sky-500"></i> Dữ liệu trên Cloud Storage</h3>
         <button id="cloudBackupX" class="modal-close" aria-label="Đóng"><i data-lucide="x" class="w-5 h-5"></i></button>
       </div>
       <div class="modal-body !overflow-y-auto max-h-[60vh]">
@@ -432,7 +436,6 @@
   </div>
 
   <script type="module">
-    // --- PERSISTENT STORAGE REQUEST ---
     async function requestPersistentStorage() {
       if (navigator.storage && navigator.storage.persist) {
         try {
@@ -440,12 +443,8 @@
           if (!isPersisted) {
             isPersisted = await navigator.storage.persist();
             if (isPersisted) {
-              console.log("Persistent storage granted: Dữ liệu sẽ được bảo vệ khỏi việc bị xóa tự động.");
-            } else {
-              console.log("Persistent storage denied: Trình duyệt từ chối cấp quyền lưu trữ vĩnh viễn.");
+              console.log("Persistent storage granted. Dữ liệu ngoại tuyến đã được bảo vệ an toàn.");
             }
-          } else {
-            console.log("Persistent storage đã được cấp quyền từ trước.");
           }
         } catch (err) {
           console.warn("Lỗi khi yêu cầu Persistent Storage:", err);
@@ -462,14 +461,13 @@
     const withTimeout = (promise, ms) => Promise.race([promise, new Promise((_, reject) => setTimeout(() => reject(new Error('timeout_error')), ms))]);
 
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-    import { initializeFirestore, persistentLocalCache, persistentMultipleTabManager, collection, doc, setDoc, getDoc, deleteDoc, onSnapshot, getDocs, writeBatch, clearIndexedDbPersistence, terminate } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+    import { initializeFirestore, persistentLocalCache, persistentMultipleTabManager, collection, doc, setDoc, getDoc, deleteDoc, onSnapshot, getDocs, writeBatch, clearIndexedDbPersistence, terminate, runTransaction } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
     import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
     import { getStorage, ref, uploadString, getDownloadURL, listAll, deleteObject, getMetadata } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-storage.js";
-    import { getFunctions, httpsCallable } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-functions.js";
 
     const APP_CONFIG = {
-        meta: { version: 'v1.0.1', appName: 'EncyAuth' },
-        crypto: { iterations: 600000, saltLen: 16, ivLen: 12 },
+        meta: { version: 'v1.0.2', appName: 'EncyAuth' },
+        crypto: { iterations: 800000, saltLen: 16, ivLen: 12 },
         security: { idleLockTimeout: 3 * 60 * 1000, maxMasterFail: 5, masterLockDuration: 3 * 60 * 1000 },
         constants: { checkKey: "_verify_auth", checkValue: "EncyAuth" }
     };
@@ -495,15 +493,11 @@
     const auth = getAuth(app);
     const provider = new GoogleAuthProvider();
     const storage = getStorage(app);
-    const functions = getFunctions(app, "asia-southeast1");
-    const getDisplayKeyFn = httpsCallable(functions, 'getEncyAuthKey');
     
     let currentUserUid = null;
-    let systemEncryptKey = null;
     let unsubSnapshot = null;
     let unsubVerify = null;
     let activeDEKKey = null;
-
     let inactivityTimer = null;
 
     function lockVault(isManual = false) {
@@ -535,6 +529,8 @@
                 }
             }
         });
+
+        render();
         
         if (!isManual && document.hasFocus() && data.length > 0) {
             showToast("Kho dữ liệu đã tự động khóa để bảo vệ an toàn.", 'info');
@@ -574,11 +570,11 @@
       const code = err.code || err.name;
       const msg = err.message || "";
       if (code === 'auth/popup-closed-by-user') return "Bạn đã đóng cửa sổ trước khi hoàn tất đăng nhập.";
-      if (code === 'auth/popup-blocked') return "Trình duyệt đã chặn cửa sổ đăng nhập.";
-      if (code === 'auth/network-request-failed' || msg === 'timeout_error') return "Không thể kết nối đến máy chủ. Vui lòng kiểm tra lại mạng.";
-      if (code === 'permission-denied') return "Truy cập bị từ chối.";
-      if (msg.includes('JSON')) return "Tệp dữ liệu không đúng định dạng.";
-      if (msg.includes('Không thể giải mã')) return "Mật khẩu hiện tại không khớp.";
+      if (code === 'auth/popup-blocked') return "Trình duyệt đã chặn cửa sổ đăng nhập. Vui lòng cho phép trang web mở popup (cửa sổ bật lên).";
+      if (code === 'auth/network-request-failed' || msg === 'timeout_error') return "Không thể kết nối đến máy chủ. Vui lòng kiểm tra lại kết nối mạng (WiFi/4G).";
+      if (code === 'permission-denied') return "Bạn không có quyền thực hiện thao tác này (Truy cập bị từ chối).";
+      if (msg.includes('JSON')) return "Tệp dữ liệu không đúng định dạng (không phải file JSON hợp lệ).";
+      if (msg.includes('Không thể giải mã')) return "Mật khẩu hiện tại không khớp với hệ thống. Đổi mật khẩu thất bại.";
       return `Lỗi hệ thống: ${msg}`;
     }
 
@@ -662,14 +658,14 @@
     }
 
     function validateImportSchema(importedArray) {
-      if (!Array.isArray(importedArray)) throw new Error("Tệp không đúng định dạng.");
+      if (!Array.isArray(importedArray)) throw new Error("Tệp không đúng định dạng (dữ liệu phải là một mảng/danh sách).");
       if (importedArray.length === 0) throw new Error("Tệp dữ liệu trống.");
       let hasVerifyKey = false;
       for (let i = 0; i < importedArray.length; i++) {
         const item = importedArray[i];
         if (item[CHECK_KEY]) { hasVerifyKey = true; continue; }
       }
-      if (!hasVerifyKey) throw new Error("Tệp dữ liệu không chứa khóa xác thực hợp lệ.");
+      if (!hasVerifyKey) throw new Error("Tệp dữ liệu không chứa khóa xác minh (Verify Key). Không thể khôi phục.");
       return true;
     }
 
@@ -709,9 +705,9 @@
         if (isMasterLocked()) { showLockoutAlert(); return null; }
 
         const verify = data.find(e => e[CHECK_KEY]);
-        if (!verify) { showAlert('Hệ thống chưa thiết lập mật khẩu chính.', {type: 'warning'}); return null; }
+        if (!verify) { showAlert('Hệ thống chưa thiết lập Mật khẩu chính.', {type: 'warning'}); return null; }
 
-        const m = await showPrompt(`Kho dữ liệu đang bị khóa. Vui lòng nhập mật khẩu chính để ${actionName}.`, 'Nhập mật khẩu...', 'Mở khóa an toàn', 'password', 'info');
+        const m = await showPrompt(`Kho dữ liệu đang bị khóa. Vui lòng nhập Mật khẩu chính để ${actionName}.`, 'Nhập mật khẩu...', 'Xác thực bảo mật', 'password', 'info');
         if (!m) return null;
 
         if (await SecureCrypto.decryptSafe(verify[CHECK_KEY], m) !== CHECK_VALUE) {
@@ -726,10 +722,12 @@
 
         activeDEKKey = dekKey; resetInactivityTimer();
         if (typeof updateLockUI === 'function') updateLockUI();
+        
+        render();
+
         return activeDEKKey;
     }
 
-    // --- APP UPDATER SYSTEM ---
     const SW_SCOPE = '/';
 
     async function getVersionInfo(targetVersion){
@@ -926,7 +924,7 @@
 
     const el = {
       search: $('#search'), list: $('#passwordList'), statCount: $('#statCount'),
-      navHome: $('#nav-home'), // <-- Bổ sung navHome vào cấu trúc đối tượng
+      navHome: $('#nav-home'),
       miAdd: $('#miAdd'), miExport: $('#miExport'), miImport: $('#miImport'), miChangeKey: $('#miChangeKey'), miReset: $('#miReset'), miAbout: $('#miAbout'), miInstall: $('#miInstall'), fileImport: $('#fileImport'),
       modal: $('#modal'), modalTitle: $('#modalTitle'), modalMsg: $('#modalMsg'), modalInput: $('#modalInput'), modalCancel: $('#modalCancel'), modalOk: $('#modalOk'),
       editModal: $('#editModal'), editTitle: $('#editTitle'), fDisplay: $('#fDisplay'), fSecret: $('#fSecret'), fMaster: $('#fMaster'), btnSaveEdit: $('#btnSaveEdit'), btnCancelEdit: $('#btnCancelEdit'), editX: $('#editX'), strengthMsg: $('#strengthMsg'), masterConfirmRow: $('#masterConfirmRow'), fMasterConfirm: $('#fMasterConfirm'), masterConfirmHint: $('#masterConfirmHint'),
@@ -1098,18 +1096,9 @@
           }
 
           currentUserUid = user.uid;
-          try {
-            const result = await getDisplayKeyFn();
-            systemEncryptKey = result.data.key;
-            if (!systemEncryptKey) throw new Error("Khóa hệ thống trống từ máy chủ.");
-          } catch (e) {
-            signOut(auth); toggleLoader(false, 'auth'); toggleLoader(false, 'boot');
-            await showAlert("Không thể tải khóa hệ thống bảo mật từ máy chủ.", {title: 'Lỗi bảo mật', type: 'error'});
-            return;
-          }
 
           $('#loginOverlay').classList.add('hidden'); $('#app').classList.remove('invisible');
-          el.connectionStatus.textContent = navigator.onLine ? "Đã kết nối máy chủ an toàn" : "Đang hoạt động ngoại tuyến";
+          el.connectionStatus.textContent = navigator.onLine ? "Đã kết nối máy chủ" : "Đang dùng ngoại tuyến (Offline)";
           
           listenCloudLockState();
 
@@ -1125,16 +1114,16 @@
           startRealtimeSync();
         } catch (e) {
           signOut(auth); 
-          await showAlert(getFriendlyErrorMessage(e), {title: 'Lỗi xác minh hệ thống', type: 'error'});
+          await showAlert(getFriendlyErrorMessage(e), {title: 'Lỗi hệ thống', type: 'error'});
         } finally { toggleLoader(false, 'auth'); toggleLoader(false, 'boot'); }
       } else {
         if (!navigator.onLine) {
           toggleLoader(false, 'auth'); toggleLoader(false, 'boot');
-          const isRetry = await openModal({ title: "Không có kết nối mạng", message: "Vui lòng bật mạng (WiFi/4G) và thử lại.", okText: "Thử lại", cancelText: "Thoát ứng dụng", cancelVisible: true, type: "error" });
+          const isRetry = await openModal({ title: "Không có kết nối mạng", message: "Ứng dụng cần kết nối mạng để đăng nhập và đồng bộ dữ liệu với máy chủ.\nVui lòng bật mạng (WiFi/4G) và thử lại.", okText: "Thử lại", cancelText: "Thoát ứng dụng", cancelVisible: true, type: "error" });
           if (isRetry) window.location.reload();
           return;
         }
-        currentUserUid = null; systemEncryptKey = null; activeDEKKey = null;
+        currentUserUid = null; activeDEKKey = null;
         if (unsubSnapshot) unsubSnapshot(); if (unsubVerify) unsubVerify(); if (unsubLockState) unsubLockState();
         $('#loginOverlay').classList.remove('hidden'); $('#app').classList.add('invisible');
         data = []; render();
@@ -1173,7 +1162,6 @@
       
       try {
         activeDEKKey = null;
-        systemEncryptKey = null;
         currentUserUid = null;
         data = [];
         visible = {};
@@ -1197,13 +1185,9 @@
         try {
           await terminate(db);
           await clearIndexedDbPersistence(db);
-        } catch (dbError) {
-          console.warn("Lỗi khi xóa bộ nhớ đệm Firestore:", dbError);
-        }
+        } catch (dbError) {}
 
-      } catch (e) {
-        console.error("Lỗi hệ thống khi đăng xuất:", e);
-      } finally {
+      } catch (e) {} finally {
         toggleLoader(false, 'logout');
         window.location.replace(window.location.pathname);
       }
@@ -1225,16 +1209,16 @@
       lucide.createIcons({root: el.btnLock});
     }
     
-    if (el.btnLock) { el.btnLock.onclick = async () => { if (activeDEKKey) lockVault(true); else { const dek = await requireDEK('mở khóa'); if (dek) showToast('Đã mở khóa!', 'success'); } }; }
+    if (el.btnLock) { el.btnLock.onclick = async () => { if (activeDEKKey) lockVault(true); else { const dek = await requireDEK('mở khóa toàn bộ Kho dữ liệu'); if (dek) showToast('Kho dữ liệu đã được mở khóa!', 'success'); } }; }
 
     function startRealtimeSync() {
-      if (!currentUserUid || !systemEncryptKey) return;
+      if (!currentUserUid) return;
       if (unsubVerify) unsubVerify();
       unsubVerify = onSnapshot(doc(db, "auth_system", "verify"), (snap) => {
           const idx = data.findIndex(e => e[CHECK_KEY]);
           if(snap.exists()) {
               const dataObj = snap.data();
-              const vObj = { [CHECK_KEY]: dataObj.value, encrypted_dek: dataObj.encrypted_dek };
+              let vObj = { [CHECK_KEY]: dataObj.value, encrypted_dek: dataObj.encrypted_dek };
               if (idx > -1) data[idx] = vObj; else data.unshift(vObj);
           } else { if (idx > -1) data.splice(idx, 1); }
           render(); if (typeof updateLockUI === 'function') updateLockUI();
@@ -1247,12 +1231,12 @@
           const fetchedAccounts = [];
           for (const docChange of snapshot.docs) {
             const raw = docChange.data();
-            const decDisplay = await SecureCrypto.decryptSafe(raw.display, systemEncryptKey);
             fetchedAccounts.push({ 
-                record_id: docChange.id, update: raw.update, display: decDisplay || "[Dữ liệu mã hóa]", 
-                secret: raw.secret, rawDisplay: raw.display, pending: docChange.metadata.hasPendingWrites 
+                record_id: docChange.id, update: raw.update, display: raw.display, 
+                secret: raw.secret, pending: docChange.metadata.hasPendingWrites 
             });
           }
+
           const existingVerify = data.find(e => e[CHECK_KEY]);
           data = fetchedAccounts;
           if (existingVerify) data.unshift(existingVerify);
@@ -1260,31 +1244,81 @@
         } finally { toggleLoader(false, 'sync'); }
       }, (error) => {
         toggleLoader(false, 'sync');
-        if (error.code === 'permission-denied') { signOut(auth); showAlert("Truy cập bị từ chối.", {type: 'error'}); }
+        if (error.code === 'permission-denied') { signOut(auth); showAlert("Tài khoản không có quyền truy cập hoặc đang bị khóa tạm thời.", {type: 'error'}); }
       });
     }
 
-    function render(){
+    async function render(){
       Object.keys(autoHideTimers).forEach(id => { 
           if (autoHideTimers[id]?.interval) clearInterval(autoHideTimers[id].interval);
           delete autoHideTimers[id]; 
       }); 
       visible = {};
-      const q = (el.search.value || '').trim().toLowerCase(); el.list.innerHTML = '';
-      const items = []; data.forEach((e, idx)=>{ if(e[CHECK_KEY] || (q && !String(e.display||'').toLowerCase().includes(q))) return; items.push({ entry: e, idx }); });
+      
+      const rawQuery = (el.search.value || '').trim().toLowerCase();
+      const removeDiacritics = (str) => {
+          return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/đ/g, 'd').replace(/Đ/g, 'D');
+      };
+      const q = removeDiacritics(rawQuery);
+
+      el.list.innerHTML = '';
+      const items = []; 
+      
+      for (const e of data) {
+          if (e[CHECK_KEY]) continue; 
+          
+          let displayTitle = e.decryptedDisplay || "[Dữ liệu mã hóa]";
+          if (activeDEKKey && e.display && !e.decryptedDisplay) {
+              try {
+                  e.decryptedDisplay = await SecureCrypto.decryptWithDEK(e.display, activeDEKKey) || "[Lỗi giải mã]";
+                  displayTitle = e.decryptedDisplay;
+              } catch (err) {
+                  displayTitle = "[Lỗi giải mã]";
+              }
+          }
+
+          if (q) {
+              const standardTitle = String(displayTitle).toLowerCase();
+              const cleanTitle = removeDiacritics(standardTitle);
+              if (!standardTitle.includes(q) && !cleanTitle.includes(q)) {
+                  continue; 
+              }
+          }
+
+          items.push({ entry: {...e, display: displayTitle}, idx: data.indexOf(e), dName: displayTitle }); 
+      }
+
       el.statCount.textContent = items.length;
       
       if (items.length === 0) {
-        let t = data.some(e => !e[CHECK_KEY]) ? (q ? 'Không tìm thấy kết quả' : 'Chưa có mã 2FA nào') : 'Chưa có dữ liệu';
-        let sub = data.some(e => !e[CHECK_KEY]) ? (q ? 'Vui lòng thử lại với từ khóa khác.' : '') : 'Nhấn nút (+) để thêm dịch vụ mới.';
-        el.list.innerHTML = `<div class="empty-state"><i data-lucide="inbox" class="w-10 h-10 text-slate-300 mb-1"></i><div class="empty-title">${t}</div><div class="empty-title" style="font-size: 13px;">${sub}</div></div>`;
+        let t = data.some(e => !e[CHECK_KEY]) ? (q ? 'Không tìm thấy kết quả' : 'Kho dữ liệu trống') : 'Kho dữ liệu trống';
+        let sub = data.some(e => !e[CHECK_KEY]) ? (q ? 'Không có tài khoản nào khớp với từ khóa của bạn.' : '') : 'Nhấn (+) để thêm tài khoản 2FA đầu tiên của bạn.';
+        el.list.innerHTML = `
+          <div class="empty-state">
+            <i data-lucide="inbox" class="w-10 h-10 text-slate-300 mb-1"></i>
+            <div class="empty-title">${t}</div>
+            <div class="empty-title" style="font-size: 13px;">${sub}</div>
+          </div>`;
       } else {
+        const totalItems = items.length;
         const fragment = document.createDocumentFragment();
-        items.sort((a,b)=>b.idx-a.idx).forEach(({entry})=>{
-          const syncIcon = entry.pending ? '<i data-lucide="cloud-off" class="w-[18px] h-[18px] text-amber-500 flex-shrink-0" title="Đang lưu nháp"></i>' : '<i data-lucide="cloud-check" class="w-[18px] h-[18px] text-teal-500 flex-shrink-0" title="Đã đồng bộ"></i>';
+
+        items.sort((a,b)=>b.idx-a.idx).forEach(({entry, dName}, index)=>{
+          const syncIcon = entry.pending ? '<i data-lucide="cloud-off" class="w-[18px] h-[18px] text-amber-500 flex-shrink-0" title="Đang lưu nháp (offline)"></i>' : '<i data-lucide="cloud-check" class="w-[18px] h-[18px] text-teal-500 flex-shrink-0" title="Đã đồng bộ"></i>';
+          
+          const orderNum = totalItems - index;
+          const paddedNum = String(orderNum).padStart(2, '0');
+
           const div = document.createElement('div'); div.className = 'entry';
           div.innerHTML = `
-            <h4 class="flex items-center gap-2.5">${syncIcon} <span class="truncate" title="${escapeHtml(entry.display)}">${escapeHtml(entry.display)}</span></h4>
+            <h4 class="flex items-center gap-2.5">
+              ${syncIcon} 
+              <span class="truncate max-w-[200px] sm:max-w-[280px]" title="${escapeHtml(dName)}">${escapeHtml(dName)}</span>
+              
+              <div class="ml-auto flex items-center justify-center min-w-[28px] h-[28px] px-3 rounded-full bg-gradient-to-b from-teal-50 to-teal-100/50 border border-teal-200/60 text-[11px] font-black text-teal-700 shadow-sm flex-shrink-0 tracking-wide" title="Tài khoản thứ ${orderNum}">
+                ${paddedNum}
+              </div>
+            </h4>
             <div id="totp-box-${entry.record_id}" style="position: relative; margin-top: 4px;">
               <input id="totp-${entry.record_id}" class="ro" style="width: 100%; padding-right: 44px; box-sizing: border-box; background: #f0fdfa; color: #0d9488; text-align: center; transition: all 0.3s;" value="MÃ 2FA: •••••••" readonly>
             </div>
@@ -1301,23 +1335,34 @@
       if (typeof updateLockUI === 'function') updateLockUI();
     }
 
-    let searchT; el.search.addEventListener('input', () => { clearTimeout(searchT); searchT = setTimeout(render, 200); });
+    let searchT; 
+    el.search.addEventListener('input', async (e) => { 
+        const val = el.search.value.trim();
+        if (val && !activeDEKKey && data.some(item => item[CHECK_KEY])) {
+            el.search.blur();
+            const dekKey = await requireDEK('tìm kiếm tài khoản');
+            if (!dekKey) {
+                el.search.value = '';
+                render();
+                return;
+            }
+            el.search.focus();
+        }
+        clearTimeout(searchT); 
+        searchT = setTimeout(render, 200); 
+    });
+
     document.addEventListener('click', e => { if(e.target?.classList?.contains('ro')) e.target.select(); });
 
-    // --- Bổ sung tính năng cho Nút Home ---
     if (el.navHome) {
         el.navHome.onclick = () => {
-            // Cuộn mượt mà lên đầu trang
             window.scrollTo({ top: 0, behavior: 'smooth' });
-            
-            // Xóa bộ lọc tìm kiếm và tải lại danh sách nếu đang ở trạng thái tìm kiếm
             if (el.search && el.search.value.trim() !== '') {
                 el.search.value = '';
                 render();
             }
         };
     }
-    // --------------------------------------
 
     const toggleShow = async (record_id, btn) => {
       if (btn.disabled) return;
@@ -1359,11 +1404,11 @@
       btn.innerHTML = '<i data-lucide="loader-2" class="animate-spin w-3 h-3 pointer-events-none"></i>...'; lucide.createIcons({root:btn});
       
       try {
-        const dekKey = await requireDEK('giải mã mã 2FA'); if (!dekKey) return; 
+        const dekKey = await requireDEK('giải mã tài khoản này'); if (!dekKey) return; 
         const entry = data.find(e => e.record_id === record_id);
         const decSecret = await SecureCrypto.decryptWithDEK(entry.secret, dekKey);
         
-        if(!decSecret) return showAlert('Giải mã thất bại.', { title: 'Lỗi', type:'error' });
+        if(!decSecret) return showAlert('Giải mã thất bại. Dữ liệu có thể đã bị hỏng trong quá trình đồng bộ hoặc sai Mật khẩu chính.', { title: 'Lỗi dữ liệu', type:'error' });
 
         visible[record_id] = true; 
         
@@ -1407,7 +1452,7 @@
         generateCode();
         autoHideTimers[`totp_refresh_${record_id}`] = { interval: setInterval(generateCode, 1000) };
         
-        let rem = 20; btn.disabled = false; 
+        let rem = 15; btn.disabled = false; 
         btn.innerHTML = `<i data-lucide="eye-off" class="w-3 h-3 pointer-events-none"></i> <span class="time-rem">${rem}s</span>`; lucide.createIcons({root: btn});
         const timeSpan = btn.querySelector('.time-rem');
         
@@ -1432,10 +1477,8 @@
         if (visible[record_id]) {
             const inp = document.getElementById(`totp-${record_id}`);
             if (inp && !inp.value.includes('•••••••')) {
-                try { 
-                    await navigator.clipboard.writeText(inp.value.replace(/\s/g,'')); 
-                    showCopySuccess(btn); 
-                } catch(e) {}
+                const success = await navigator.clipboard.writeText(inp.value.replace(/\s/g,'')).then(() => true).catch(() => false);
+                if (success) showCopySuccess(btn); else showAlert('Trình duyệt không hỗ trợ sao chép tự động.', {type: 'error'});
                 return;
             }
         }
@@ -1447,11 +1490,13 @@
             const dekKey = await requireDEK('sao chép mã 2FA'); if (!dekKey) return;
             const entry = data.find(e => e.record_id === record_id);
             const decSecret = await SecureCrypto.decryptWithDEK(entry.secret, dekKey);
-            if(!decSecret) return showAlert('Giải mã thất bại.', {type:'error' });
+            if(!decSecret) return showAlert('Giải mã thất bại. Dữ liệu có thể đã bị hỏng.', { title: 'Lỗi dữ liệu', type:'error' });
             
             let totp = decSecret.startsWith('otpauth://') ? OTPAuth.URI.parse(decSecret) : new OTPAuth.TOTP({ secret: decSecret.replace(/\s/g,'') });
-            await navigator.clipboard.writeText(totp.generate()); showCopySuccess(btn);
+            const success = await navigator.clipboard.writeText(totp.generate()).then(() => true).catch(() => false);
+            if (success) showCopySuccess(btn); else throw new Error();
         } catch (e) {
+            showAlert('Trình duyệt của bạn chặn tự động sao chép. Vui lòng bấm Giải mã và sao chép thủ công.', {type: 'error'});
         } finally {
             btn.disabled = false; if (!btn.innerHTML.includes('check')) { btn.innerHTML = origHtml; lucide.createIcons({root: btn}); }
         }
@@ -1482,7 +1527,7 @@
     }
     
     function addEntryModal() { 
-      el.editTitle.innerHTML='<i data-lucide="plus-square" class="w-5 h-5 text-teal-600"></i> Thêm mã 2FA'; lucide.createIcons({root:el.editTitle}); 
+      el.editTitle.innerHTML='<i data-lucide="plus-square" class="w-5 h-5 text-teal-600"></i> Thêm'; lucide.createIcons({root:el.editTitle}); 
       el.masterConfirmRow.style.display = data.find(e=>e[CHECK_KEY]) ? 'none':'flex'; 
       openEdit(true, false); 
     }
@@ -1495,11 +1540,29 @@
       el.masterConfirmHint.innerHTML = isMatch ? '<i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i> Mật khẩu trùng khớp' : '<i data-lucide="x-circle" class="w-3.5 h-3.5"></i> Mật khẩu không khớp';
       el.masterConfirmHint.classList.remove('text-teal-600', 'text-rose-600'); el.masterConfirmHint.classList.add(isMatch ? 'text-teal-600' : 'text-rose-600'); lucide.createIcons({ root: el.masterConfirmHint });
     };
-    function check(pw){ const s=(pw.length>=12?1:0)+(/[A-Z]/.test(pw)?1:0)+(/[a-z]/.test(pw)?1:0)+(/\d/.test(pw)?1:0)+(/[\W_]/.test(pw)?1:0); return s>4?' Bảo mật rất cao':s>3?' Bảo mật cao':s>2?' Bảo mật trung bình':' Bảo mật yếu'; }
+
+    function check(pw) {
+        let missing = [];
+        if (pw.length < 12) missing.push("12 ký tự");
+        if (!/[A-Z]/.test(pw)) missing.push("chữ Hoa");
+        if (!/[a-z]/.test(pw)) missing.push("chữ thường");
+        if (!/\d/.test(pw)) missing.push("số");
+        if (!/[\W_]/.test(pw)) missing.push("ký tự đặc biệt");
+
+        if (missing.length > 0) {
+            return { valid: false, text: `Chưa đạt (Thiếu: ${missing.join(', ')})` };
+        }
+        return { valid: true, text: pw.length >= 16 ? 'Bảo mật rất cao' : 'Bảo mật cao' };
+    }
 
     const updateStrength = () => {
-        const pw = el.fMaster.value || ''; el.strengthMsg.className = 'small mt-1 flex items-center gap-1.5 text-teal-600'; el.strengthMsg.style.display = pw ? 'inline-flex' : 'none';
-        el.strengthMsg.innerHTML = '<i data-lucide="shield-check" class="w-3.5 h-3.5"></i> ' + check(pw); lucide.createIcons({ root: el.strengthMsg });
+        const pw = el.fMaster.value || '';
+        if (!pw) { el.strengthMsg.style.display = 'none'; return; }
+        const res = check(pw);
+        el.strengthMsg.className = `small mt-1 flex items-center gap-1.5 ${res.valid ? 'text-teal-600' : 'text-rose-600'}`;
+        el.strengthMsg.style.display = 'inline-flex';
+        el.strengthMsg.innerHTML = `<i data-lucide="${res.valid ? 'shield-check' : 'alert-circle'}" class="w-3.5 h-3.5"></i> ${res.text}`;
+        lucide.createIcons({ root: el.strengthMsg });
     };
     el.fMaster.addEventListener('input', () => { updateStrength(); checkMasterMatch(); });
     el.fMasterConfirm.addEventListener('input', checkMasterMatch);
@@ -1515,16 +1578,19 @@
 
         if(!d) { showInlineError(el.fDisplay, el.errDisplay, "Vui lòng nhập tên dịch vụ", false); isValid = false; firstErrorInput = firstErrorInput || el.fDisplay; }
         if(!s && editingId === null) { showInlineError(el.fSecret, el.errSecret, "Vui lòng nhập mã bí mật", false); isValid = false; firstErrorInput = firstErrorInput || el.fSecret; }
-        if(!isUnlocked && !m) { showInlineError(el.fMaster, el.errMaster, "Vui lòng nhập mật khẩu", false); isValid = false; firstErrorInput = firstErrorInput || el.fMaster; }
+        if(!isUnlocked && !m) { showInlineError(el.fMaster, el.errMaster, "Vui lòng nhập Mật khẩu chính", false); isValid = false; firstErrorInput = firstErrorInput || el.fMaster; }
 
         let dekKeyToUse = activeDEKKey;
 
         if(!verify){
-          if(m && m.length < 12) { showInlineError(el.fMaster, el.errMaster, "Mật khẩu tối thiểu 12 ký tự", false); isValid = false; firstErrorInput = firstErrorInput || el.fMaster; }
-          if(el.fMasterConfirm.value !== m) { showInlineError(el.fMasterConfirm, el.masterConfirmHint, "Mật khẩu không khớp", false); isValid = false; firstErrorInput = firstErrorInput || el.fMasterConfirm; }
+          const masterRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{12,}$/;
+          if(m && !masterRegex.test(m)) { showInlineError(el.fMaster, el.errMaster, "Mật khẩu phải ≥ 12 ký tự, gồm chữ Hoa, thường, số và ký tự đặc biệt", false); isValid = false; firstErrorInput = firstErrorInput || el.fMaster; }
+          if(el.fMasterConfirm.value !== m) { showInlineError(el.fMasterConfirm, el.masterConfirmHint, "Mật khẩu xác nhận không khớp", false); isValid = false; firstErrorInput = firstErrorInput || el.fMasterConfirm; }
         }
 
         if (!isValid) { if (firstErrorInput) focusAndBlink(firstErrorInput); savingEdit = false; el.btnSaveEdit.disabled = false; el.btnSaveEdit.innerHTML = '<i data-lucide="save" class="w-5 h-5"></i> Lưu dữ liệu'; lucide.createIcons({root: el.btnSaveEdit}); return; }
+
+        let verifyDataToBatch = null;
 
         if (verify) {
           if (!isUnlocked) {
@@ -1532,12 +1598,15 @@
               if(await SecureCrypto.decryptSafe(verify[CHECK_KEY], m) !== CHECK_VALUE){ registerMasterFail(); showInlineError(el.fMaster, el.errMaster, getWrongMasterMessage()); savingEdit=false; el.btnSaveEdit.disabled=false; el.btnSaveEdit.innerHTML='<i data-lucide="save" class="w-5 h-5"></i> Lưu dữ liệu'; lucide.createIcons({root: el.btnSaveEdit}); return; }
               resetMasterFail();
               dekKeyToUse = await getDEKKey(m, verify);
+              if (!dekKeyToUse) { savingEdit=false; el.btnSaveEdit.disabled=false; el.btnSaveEdit.innerHTML='<i data-lucide="save" class="w-5 h-5"></i> Lưu dữ liệu'; lucide.createIcons({root: el.btnSaveEdit}); return showAlert('Không thể tải khóa dữ liệu. Dữ liệu bị lỗi.', {type:'error'}); }
               activeDEKKey = dekKeyToUse; if (typeof updateLockUI === 'function') updateLockUI();
           }
           resetInactivityTimer();
         } else {
           const newRawDEK = SecureCrypto.generateDEK();
-          await setDoc(doc(db, "auth_system", "verify"), { value: await SecureCrypto.encrypt(CHECK_VALUE, m), encrypted_dek: await SecureCrypto.encrypt(newRawDEK, m) });
+          const encryptedDEK = await SecureCrypto.encrypt(newRawDEK, m);
+          const checkValEnc = await SecureCrypto.encrypt(CHECK_VALUE, m);
+          verifyDataToBatch = { value: checkValEnc, encrypted_dek: encryptedDEK };
           dekKeyToUse = await SecureCrypto.importDEK(newRawDEK); activeDEKKey = dekKeyToUse;
           if (typeof updateLockUI === 'function') updateLockUI(); resetInactivityTimer();
         }
@@ -1553,42 +1622,57 @@
             secretPayload = await SecureCrypto.encryptWithDEK(s.toUpperCase().replace(/[\s-]/g,''), dekKeyToUse);
         }
 
-        await setDoc(doc(db, "authenticator", record_id), {
+        const encryptedDisplay = await SecureCrypto.encryptWithDEK(d, dekKeyToUse);
+
+        const batch = writeBatch(db);
+        if (verifyDataToBatch) batch.set(doc(db, "auth_system", "verify"), verifyDataToBatch);
+        batch.set(doc(db, "authenticator", record_id), {
             record_id: record_id,
-            display: await SecureCrypto.encrypt(d, systemEncryptKey),
+            display: encryptedDisplay,
             secret: secretPayload,
             update: parseInt(getTimestamp(), 10)
         });
 
-        toggleLoader(false, 'save'); openEdit(false); showToast('Đã lưu thành công.', 'success'); 
-      } catch(err) { toggleLoader(false, 'save'); await showAlert(getFriendlyErrorMessage(err), { type:'error' }); } 
+        const commitTask = batch.commit().catch(err => console.warn("Chờ đồng bộ nền:", err));
+        if (navigator.onLine) await Promise.race([commitTask, new Promise(resolve => setTimeout(resolve, 3000))]);
+
+        toggleLoader(false, 'save'); openEdit(false); showToast(navigator.onLine ? 'Dữ liệu đã được lưu thành công.' : 'Đã lưu nháp ngoại tuyến (sẽ tự đồng bộ khi có mạng).', 'success'); 
+      } catch(err) { toggleLoader(false, 'save'); await showAlert(getFriendlyErrorMessage(err), { title: 'Không thể lưu', type:'error' }); } 
       finally { savingEdit=false; el.btnSaveEdit.disabled=false; el.btnSaveEdit.innerHTML='<i data-lucide="save" class="w-5 h-5"></i> Lưu dữ liệu'; lucide.createIcons({root: el.btnSaveEdit}); }
     };
     el.btnCancelEdit.onclick = el.editX.onclick = () => openEdit(false);
 
     const editEntry = async (record_id) => {
-      const dekKey = await requireDEK('sửa dịch vụ'); if (!dekKey) return;
+      const dekKey = await requireDEK('sửa tài khoản'); if (!dekKey) return;
       const cur = data.find(e => e.record_id === record_id); 
+      let originalDisplay = cur.display;
+      try {
+          const decrypted = await SecureCrypto.decryptWithDEK(cur.display, dekKey);
+          if (decrypted) originalDisplay = decrypted;
+      } catch(e) {}
       const decS = await SecureCrypto.decryptWithDEK(cur.secret, dekKey);
       
-      if(!decS) return showAlert('Giải mã thất bại.', {type:'error' });
+      if(!decS) return showAlert('Giải mã thất bại. Dữ liệu có thể đã bị hỏng trong quá trình đồng bộ hoặc sai Mật khẩu chính.', { title: 'Lỗi dữ liệu', type:'error' });
       editingId = record_id; 
-      el.editTitle.innerHTML = '<i data-lucide="edit-3" class="w-5 h-5 text-teal-600"></i> Sửa dịch vụ'; lucide.createIcons({root: el.editTitle});
-      el.fDisplay.value = cur.display; 
+      el.editTitle.innerHTML = '<i data-lucide="edit-3" class="w-5 h-5 text-teal-600"></i> Sửa'; lucide.createIcons({root: el.editTitle});
+      el.fDisplay.value = originalDisplay; 
       el.fSecret.value = decS; 
       openEdit(true, true);
     };
 
     const deleteEntry = async (record_id) => {
-      const dekKey = await requireDEK('xóa dịch vụ'); if (!dekKey) return;
-      if(await showConfirm('Bạn có chắc chắn muốn xóa mã này? Hành động này không thể hoàn tác.', 'Cảnh báo', 'error')) { 
+      const dekKey = await requireDEK('xóa tài khoản'); if (!dekKey) return;
+      if(await showConfirm('Bạn có chắc chắn muốn xóa tài khoản này? Hành động này không thể hoàn tác.', 'Cảnh báo', 'error')) { 
           toggleLoader(true, 'delete', 'Đang xóa...');
           try {
               if (autoHideTimers[record_id]?.interval) clearInterval(autoHideTimers[record_id].interval);
               if (autoHideTimers[`totp_refresh_${record_id}`]?.interval) clearInterval(autoHideTimers[`totp_refresh_${record_id}`].interval);
-              await deleteDoc(doc(db, "authenticator", record_id)); 
-              toggleLoader(false, 'delete'); showToast('Đã xóa.', 'success'); 
-          } catch(e) { toggleLoader(false, 'delete'); await showAlert(getFriendlyErrorMessage(e), { type:'error' }); }
+              
+              const delTask = deleteDoc(doc(db, "authenticator", record_id)).catch(err => console.warn("Chờ đồng bộ nền:", err));
+              if (navigator.onLine) await Promise.race([delTask, new Promise(resolve => setTimeout(resolve, 3000))]);
+
+              toggleLoader(false, 'delete'); showToast(navigator.onLine ? 'Tài khoản đã được xóa.' : 'Đã xóa ngoại tuyến (sẽ tự đồng bộ khi có mạng).', 'success'); 
+          } catch(e) { toggleLoader(false, 'delete'); await showAlert(getFriendlyErrorMessage(e), { title: 'Lỗi khi xóa', type:'error' }); }
       }
     };
 
@@ -1603,27 +1687,91 @@
     function openCK(open=true){ el.ckModal.classList.toggle('open',open); clearAllCkErrors(); if(!open){ el.ckOld.value=el.ckNew.value=el.ckConfirm.value=''; el.ckStrength.style.display=el.ckHint.style.display='none'; resetPasswordToggles(el.ckModal); } else { setTimeout(()=>el.ckOld.focus(),0); } }
     el.miChangeKey.onclick = () => { closeMenuModal(); if(data.some(e=>!e[CHECK_KEY])) openCK(true); else showAlert('Danh sách hiện đang trống.', {type: 'info'}); };
     el.ckCancel.onclick = el.ckX.onclick = () => openCK(false);
+    
     el.ckOk.onclick = async () => {
-      if (!navigator.onLine) return showAlert('Vui lòng kết nối mạng!', {type: 'warning'});
+      if (!navigator.onLine) return showAlert('Vui lòng kết nối mạng (WiFi/4G) để đổi Mật khẩu chính!', {type: 'warning'});
       if (isMasterLocked()) return showLockoutAlert();
-      const old=el.ckOld.value, nk=el.ckNew.value, cf=el.ckConfirm.value; const verify=data.find(e=>e[CHECK_KEY]);
+      
+      const old = el.ckOld.value, nk = el.ckNew.value, cf = el.ckConfirm.value; 
+      const verify = data.find(e => e[CHECK_KEY]);
+      
       clearAllCkErrors(); let isValid = true; let firstErrorInput = null;
       if (!old) { showInlineError(el.ckOld, el.errCkOld, "Vui lòng nhập mật khẩu hiện tại", false); isValid = false; firstErrorInput = firstErrorInput || el.ckOld; }
       if (!nk) { showInlineError(el.ckNew, el.errCkNew, "Vui lòng nhập mật khẩu mới", false); isValid = false; firstErrorInput = firstErrorInput || el.ckNew; }
       if (!cf) { showInlineError(el.ckConfirm, el.errCkConfirm, "Vui lòng xác nhận mật khẩu", false); isValid = false; firstErrorInput = firstErrorInput || el.ckConfirm; }
-      if(nk && nk.length < 12) { showInlineError(el.ckNew, el.errCkNew, "Mật khẩu mới tối thiểu 12 ký tự", false); isValid = false; firstErrorInput = firstErrorInput || el.ckNew; }
+
+      const masterRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{12,}$/;
+      if(nk && !masterRegex.test(nk)) { showInlineError(el.ckNew, el.errCkNew, "Mật khẩu phải ≥ 12 ký tự, gồm chữ Hoa, thường, số và ký tự đặc biệt", false); isValid = false; firstErrorInput = firstErrorInput || el.ckNew; }
       if(cf && nk !== cf) { showInlineError(el.ckConfirm, el.errCkConfirm, "Xác nhận mật khẩu không khớp", false); isValid = false; firstErrorInput = firstErrorInput || el.ckNew; }
       if (!isValid) { if (firstErrorInput) focusAndBlink(firstErrorInput); return; }
-      if(!verify) return showAlert('Không tìm thấy khóa dữ liệu.', {type:'error'});
+      
+      if(!verify) return showAlert('Không tìm thấy khóa dữ liệu hệ thống.', {type:'error'});
       if(await SecureCrypto.decryptSafe(verify[CHECK_KEY], old) !== CHECK_VALUE){ registerMasterFail(); return showInlineError(el.ckOld, el.errCkOld, getWrongMasterMessage()); } 
-      resetMasterFail(); toggleLoader(true, 'ck', 'Đang đổi mật khẩu...'); el.ckOk.disabled = true; el.ckOk.innerHTML = '<i data-lucide="loader-2" class="w-5 h-5 animate-spin"></i> Đang xử lý...'; lucide.createIcons({root: el.ckOk});
+      resetMasterFail(); 
+      
+      toggleLoader(true, 'ck', 'Đang xác thực và đổi mật khẩu...'); 
+      el.ckOk.disabled = true; 
+      el.ckOk.innerHTML = '<i data-lucide="loader-2" class="w-5 h-5 animate-spin"></i> Đang xử lý...'; 
+      lucide.createIcons({root: el.ckOk});
+      
       try {
         const rawDEK = await SecureCrypto.decryptSafe(verify.encrypted_dek, old);
-        await setDoc(doc(db, "auth_system", "verify"), { value: await SecureCrypto.encrypt(CHECK_VALUE, nk), encrypted_dek: await SecureCrypto.encrypt(rawDEK, nk) });
-        activeDEKKey = null; if (typeof updateLockUI === 'function') updateLockUI();
-        toggleLoader(false, 'ck'); openCK(false); await showAlert('Đổi mật khẩu thành công.', {type:'success'});
-      } catch(e) { toggleLoader(false, 'ck'); await showAlert(getFriendlyErrorMessage(e), {type:'error'}); } finally { el.ckOk.disabled = false; el.ckOk.innerHTML = '<i data-lucide="check" class="w-5 h-5"></i> Xác nhận đổi'; lucide.createIcons({root: el.ckOk}); }
+        if (!rawDEK) throw new Error('Không thể giải mã khóa dữ liệu cũ.');
+
+        const newEncryptedDEK = await SecureCrypto.encrypt(rawDEK, nk);
+        const newCheckVal = await SecureCrypto.encrypt(CHECK_VALUE, nk);
+
+        const verifyDocRef = doc(db, "auth_system", "verify");
+        
+        await runTransaction(db, async (transaction) => {
+            await transaction.get(verifyDocRef);
+            transaction.set(verifyDocRef, { 
+                value: newCheckVal, 
+                encrypted_dek: newEncryptedDEK 
+            });
+        });
+
+        activeDEKKey = null; 
+        if (typeof updateLockUI === 'function') updateLockUI();
+        
+        toggleLoader(false, 'ck'); 
+        openCK(false); 
+        await showAlert('Đổi mật khẩu thành công. LƯU Ý: Mật khẩu này được sử dụng chung cho toàn bộ Kho dữ liệu, hãy ghi nhớ thật kỹ.', {type:'success', title: 'Đổi khóa thành công'});
+      } catch(e) { 
+        toggleLoader(false, 'ck'); 
+        await showAlert(getFriendlyErrorMessage(e), { title: 'Đổi mật khẩu thất bại', type:'error' }); 
+      } finally { 
+        el.ckOk.disabled = false; 
+        el.ckOk.innerHTML = '<i data-lucide="check" class="w-5 h-5"></i> Xác nhận đổi'; 
+        lucide.createIcons({root: el.ckOk}); 
+      }
     };
+
+    const updateStrengthCK = () => {
+        const pw = el.ckNew.value || '';
+        if (!pw) {
+            el.ckStrength.style.display = 'none';
+        } else {
+            const res = check(pw);
+            el.ckStrength.className = `small mt-1 flex items-center gap-1.5 ${res.valid ? 'text-teal-600' : 'text-rose-600'}`;
+            el.ckStrength.style.display = 'inline-flex';
+            el.ckStrength.innerHTML = `<i data-lucide="${res.valid ? 'shield-check' : 'alert-circle'}" class="w-3.5 h-3.5"></i> ${res.text}`;
+            lucide.createIcons({ root: el.ckStrength.parentNode.parentNode });
+        }
+        
+        el.ckHint.className = 'small mt-1 flex items-center gap-1.5';
+        el.ckHint.style.display = el.ckConfirm.value ? 'inline-flex' : 'none'; 
+        el.ckHint.innerHTML = el.ckConfirm.value === pw 
+            ? '<i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i> Mật khẩu trùng khớp' 
+            : '<i data-lucide="x-circle" class="w-3.5 h-3.5"></i> Mật khẩu không khớp'; 
+        
+        el.ckHint.classList.remove('text-teal-600', 'text-rose-600');
+        el.ckHint.classList.add(el.ckConfirm.value === pw ? 'text-teal-600' : 'text-rose-600');
+        
+        lucide.createIcons({ root: el.ckNew.parentNode.parentNode }); 
+    };
+    el.ckNew.addEventListener('input', updateStrengthCK);
+    el.ckConfirm.addEventListener('input', updateStrengthCK);
 
     function closeMenuModal() { $('#fab-menu-modal').classList.remove('open'); }
     document.getElementById('btnOpenMenu').addEventListener('click', () => $('#fab-menu-modal').classList.add('open'));
@@ -1632,7 +1780,7 @@
     const exportData = async () => {
       const accountsToExport = data.filter(e => !e[CHECK_KEY]);
       if (accountsToExport.length === 0) {
-        return showToast('Danh sách hiện đang trống. Không có dữ liệu để sao lưu.', 'warning');
+        return showToast('Danh sách tài khoản hiện đang trống. Không có dữ liệu để sao lưu.', 'warning');
       }
 
       const verify = data.find(e => e[CHECK_KEY]); 
@@ -1646,20 +1794,13 @@
       toggleLoader(true, 'export', 'Đang tạo bản sao lưu an toàn...');
 
       try {
-          const encryptedDisplayKey = await SecureCrypto.encryptWithDEK(systemEncryptKey, dekKeyToUse);
-
           const exportList = data.map(item => {
             if (item[CHECK_KEY]) {
-                return { 
-                    [CHECK_KEY]: item[CHECK_KEY], 
-                    encrypted_dek: item.encrypted_dek,
-                    encrypted_display_key: encryptedDisplayKey 
-                }; 
+                return { [CHECK_KEY]: item[CHECK_KEY], encrypted_dek: item.encrypted_dek }; 
             }
-            
             return {
               record_id: item.record_id,
-              display: item.rawDisplay || item.display,
+              display: item.display,
               secret: item.secret,
               update: item.update
             };
@@ -1676,42 +1817,32 @@
           };
 
           const jsonString = JSON.stringify(backupContent, null, 2);
-          
           const userEmailPrefix = auth.currentUser ? auth.currentUser.email.split('@')[0] : 'user';
           const fileName = `EncyAuth_${userEmailPrefix}_${getTimestamp()}.json`;
 
           const downloadLocalFile = () => {
               const b = new Blob([jsonString], {type:'application/json'});
-              const a = document.createElement('a'); 
-              a.href = URL.createObjectURL(b); 
-              a.download = fileName; 
-              a.click(); 
+              const a = document.createElement('a'); a.href = URL.createObjectURL(b); a.download = fileName; a.click(); 
           };
 
           if (navigator.onLine && currentUserUid) {
-              toggleLoader(true, 'export', 'Đang đẩy dữ liệu lên Cloud...');
-              
+              toggleLoader(true, 'export', 'Đang đẩy dữ liệu lên Cloud Storage...');
               try {
                   const storageRef = ref(storage, `auth_backups/shared/${fileName}`);
                   await uploadString(storageRef, jsonString, 'raw', {
                       contentType: 'application/json',
-                      customMetadata: {
-                          version: APP_VERSION,
-                          total_accounts: String(backupContent.metadata.total_accounts)
-                      }
+                      customMetadata: { version: APP_VERSION, total_accounts: String(backupContent.metadata.total_accounts) }
                   });
                   showToast('Dữ liệu đã được sao lưu an toàn lên Cloud Storage!', 'success');
               } catch (cloudErr) {
-                  console.error("Lỗi khi upload lên Cloud:", cloudErr);
                   downloadLocalFile();
-                  await showAlert('Không thể kết nối Cloud. Dữ liệu đã được tải xuống thiết bị của bạn để dự phòng.', {title: 'Lỗi mạng', type: 'warning'});
+                  await showAlert('Không thể kết nối Cloud Storage. Dữ liệu đã được tải xuống thiết bị của bạn để dự phòng.', {title: 'Lỗi mạng', type: 'warning'});
               }
           } else {
               downloadLocalFile();
               showToast('Dữ liệu đã được tải xuống thiết bị dự phòng.', 'success');
           }
       } catch (err) {
-          console.error("Lỗi khi sao lưu:", err);
           await showAlert(getFriendlyErrorMessage(err), { title: 'Lỗi sao lưu', type: 'error' });
       } finally {
           toggleLoader(false, 'export');
@@ -1719,7 +1850,6 @@
     };
 
     el.miExport.onclick = () => { closeMenuModal(); exportData(); };
-    
     el.miImport.onclick = () => { closeMenuModal(); el.fileImport.click(); };
     
     el.fileImport.onchange = (e) => {
@@ -1727,123 +1857,87 @@
         e.target.value = '';
         return showAlert('Vui lòng kết nối mạng (WiFi/4G) để khôi phục dữ liệu!', {type: 'warning'});
       }
-      const f = e.target.files?.[0]; 
-      if(!f) return; 
+      const f = e.target.files?.[0]; if(!f) return; 
 
       if (f.name && !f.name.toLowerCase().endsWith('.json')) {
           e.target.value = '';
           return showAlert('Vui lòng chọn tệp định dạng .json hợp lệ.', {type: 'error'});
       }
-
-      if (isMasterLocked()) {
-          showLockoutAlert();
+      
+      const MAX_FILE_SIZE = 2 * 1024 * 1024;
+      if (f.size > MAX_FILE_SIZE) {
           e.target.value = '';
-          return;
+          return showAlert('Dung lượng file quá lớn. Tệp sao lưu tối đa chỉ được phép 2MB.', {type: 'error'});
       }
+
+      if (isMasterLocked()) { showLockoutAlert(); e.target.value = ''; return; }
 
       const r = new FileReader();
       r.onload = async ev => {
         try {
-          let importedRaw;
-          let imported;
-          
+          let importedRaw, imported;
           try {
             importedRaw = JSON.parse(ev.target.result);
           } catch (parseErr) {
             throw new Error("Tệp tin bị hỏng hoặc không phải là JSON hợp lệ.");
           }
-          
           imported = Array.isArray(importedRaw) ? importedRaw : importedRaw?.data;
-          
-          if (!imported || !Array.isArray(imported)) {
-             throw new Error("Cấu trúc file không đúng định dạng dữ liệu EncyAuth. Vui lòng kiểm tra lại tệp sao lưu.");
-          }
+          if (!imported || !Array.isArray(imported)) throw new Error("Cấu trúc file không đúng định dạng dữ liệu EncyAuth. Vui lòng kiểm tra lại tệp sao lưu.");
           
           validateImportSchema(imported);
-
           const verify = imported.find(x => x[CHECK_KEY]);
           
           let promptMessage = 'Vui lòng nhập mật khẩu của tệp dữ liệu (JSON) để khôi phục.'; 
-          
           if (importedRaw && importedRaw.metadata) {
               const meta = importedRaw.metadata;
               let dateStr = meta.created_at;
               try {
                   const d = new Date(meta.created_at);
-                  if (!isNaN(d)) {
-                      dateStr = d.toLocaleString('vi-VN', { 
-                          hour: '2-digit', minute: '2-digit', 
-                          day: '2-digit', month: '2-digit', year: 'numeric' 
-                      });
-                  }
+                  if (!isNaN(d)) dateStr = d.toLocaleString('vi-VN', { hour: '2-digit', minute: '2-digit', day: '2-digit', month: '2-digit', year: 'numeric' });
               } catch (e) {}
-
-              promptMessage = `Thông tin tệp sao lưu:\n• Phiên bản: ${meta.version || '---'}\n• Thời gian tạo: ${dateStr}\n• Tổng số dịch vụ: ${meta.total_accounts}\n\nVui lòng nhập mật khẩu để giải mã và khôi phục dữ liệu.`;
+              promptMessage = `Thông tin tệp sao lưu:\n• Phiên bản: ${meta.version || '---'}\n• Thời gian tạo: ${dateStr}\n• Tổng số tài khoản: ${meta.total_accounts}\n\nVui lòng nhập mật khẩu để giải mã và khôi phục dữ liệu.`;
           }
           
           const m = await showPrompt(promptMessage, 'Nhập mật khẩu...', 'Khôi phục Dữ liệu', 'password', 'info'); 
           if(!m) { e.target.value = ''; return; }
           
           if(await SecureCrypto.decryptSafe(verify[CHECK_KEY], m) !== CHECK_VALUE) { 
-              registerMasterFail(); 
-              await showAlert('Mật khẩu không chính xác.', {type:'error'}); 
-              e.target.value = ''; 
-              return; 
+              registerMasterFail(); await showAlert('Mật khẩu không chính xác.', {type:'error'}); e.target.value = ''; return; 
           } 
           resetMasterFail();
           
-          if(!await showConfirm('Hành động này sẽ XÓA VĨNH VIỄN dữ liệu hiện tại và thay thế bằng dữ liệu mới khôi phục. Bạn có chắc chắn muốn tiếp tục?', 'Cảnh báo Nguy hiểm', 'error')) { 
-              e.target.value = ''; 
-              return; 
+          if(!await showConfirm('Cảnh báo: Hành động này sẽ GHI ĐÈ VÀ XÓA VĨNH VIỄN dữ liệu hiện tại trên thiết bị. Bạn có chắc chắn muốn tiếp tục?', 'Cảnh báo Nguy hiểm', 'error')) { 
+              e.target.value = ''; return; 
           }
           
           toggleLoader(true, 'import', 'Đang khôi phục...');
           const batch = writeBatch(db);
 
-          const dekKeyToUse = await getDEKKey(m, verify);
-
-          if (verify.encrypted_display_key) {
-              const decKey = await SecureCrypto.decryptWithDEK(verify.encrypted_display_key, dekKeyToUse);
-              if (decKey) {
-                  systemEncryptKey = decKey; 
-              }
-          }
-
-          batch.set(doc(db, "auth_system", "verify"), { 
-              value: verify[CHECK_KEY], 
-              encrypted_dek: verify.encrypted_dek 
-          });
-          
+          batch.set(doc(db, "auth_system", "verify"), { value: verify[CHECK_KEY], encrypted_dek: verify.encrypted_dek });
           (await getDocs(collection(db, "authenticator"))).forEach(d => batch.delete(d.ref));
           
           let recordIndex = 0;
           for(const i of imported){
-            if(i[CHECK_KEY] || (!i.display && !i.rawDisplay)) continue;
-            let finalD = i.rawDisplay || i.display;
-            try { if(!await SecureCrypto.decryptSafe(finalD, systemEncryptKey)) finalD = await SecureCrypto.encrypt(String(i.display || ''), systemEncryptKey); } catch{ finalD = await SecureCrypto.encrypt(String(i.display || ''), systemEncryptKey); }
-            
+            if(i[CHECK_KEY] || !i.display) continue;
             const fallbackId = getTimestamp() + "_" + (recordIndex++);
             const newRecordId = String(i.record_id || fallbackId);
             
             batch.set(doc(db, "authenticator", newRecordId), { 
                 record_id: newRecordId, 
-                display: finalD, 
+                display: i.display, 
                 secret: String(i.secret || ''), 
                 update: parseInt(i.update, 10) || parseInt(getTimestamp(), 10) 
             });
           }
           await batch.commit(); 
-          activeDEKKey = null;
-          if (typeof updateLockUI === 'function') updateLockUI();
+          activeDEKKey = null; if (typeof updateLockUI === 'function') updateLockUI();
           
           toggleLoader(false, 'import');
           showToast('Dữ liệu đã được khôi phục thành công.', 'success');
         } catch(err) { 
           toggleLoader(false, 'import');
           await showAlert(getFriendlyErrorMessage(err), { title: 'Lỗi khôi phục dữ liệu', type:'error' }); 
-        } finally { 
-          e.target.value=''; 
-        }
+        } finally { e.target.value=''; }
       }; r.readAsText(f);
     };
 
@@ -1857,7 +1951,7 @@
         
         if (!navigator.onLine) {
             elCloud.modal.classList.remove('open');
-            return showAlert('Vui lòng kết nối mạng để xem dữ liệu đám mây!', {type: 'warning'});
+            return showAlert('Vui lòng kết nối mạng để xem dữ liệu Cloud Storage!', {type: 'warning'});
         }
 
         elCloud.list.innerHTML = '<div class="text-center py-6 text-slate-400"><i data-lucide="loader-2" class="w-6 h-6 animate-spin mx-auto mb-2"></i> Đang tải dữ liệu...</div>';
@@ -1895,56 +1989,56 @@
                     <div class="flex items-center gap-3 overflow-hidden">
                         <div>
                             <div class="truncate text-[14px] font-bold text-slate-700">${displayTitle}</div>
-                            <div class="text-[11px] text-slate-400 font-medium tracking-wide">Bản ${version} - ${totalAcc} dịch vụ</div>
+                            <div class="text-[11px] text-slate-400 font-medium tracking-wide">${version} - Có ${totalAcc} tài khoản</div>
                         </div>
                     </div>
                     <div class="flex items-center gap-1">
-                        <button class="btn-restore p-2 text-slate-400 hover:text-indigo-500 transition-colors" title="Khôi phục"><i data-lucide="upload-cloud" class="w-5 h-5 pointer-events-none"></i></button>
+                        <button class="btn-restore p-2 text-slate-400 hover:text-indigo-500 transition-colors" title="Khôi phục trực tiếp"><i data-lucide="upload-cloud" class="w-5 h-5 pointer-events-none"></i></button>
                         <button class="btn-download p-2 text-slate-400 hover:text-emerald-500 transition-colors" title="Tải về"><i data-lucide="download" class="w-5 h-5 pointer-events-none"></i></button>
                         <button class="btn-delete p-2 text-slate-400 hover:text-rose-500 transition-colors" title="Xóa"><i data-lucide="trash-2" class="w-5 h-5 pointer-events-none"></i></button>
                     </div>
                 `;
 
                 itemDiv.querySelector('.btn-download').onclick = async () => {
+                    if (!navigator.onLine) return showAlert('Mất kết nối mạng. Vui lòng kết nối Internet để tải file.', {type: 'warning'});
                     toggleLoader(true, 'dl_cloud', 'Đang tải file...');
                     try {
                         const url = await withTimeout(getDownloadURL(itemRef), 15000);
                         const response = await withTimeout(fetch(url), 15000);
                         const blob = await response.blob();
                         const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = item.name; a.click();
-                        showToast('Đã tải bản sao lưu.', 'success');
-                    } catch (e) { showAlert('Lỗi tải file.', {type: 'error'}); } finally { toggleLoader(false, 'dl_cloud'); }
+                        showToast('Đã tải bản sao lưu xuống thiết bị.', 'success');
+                    } catch (e) { 
+                        if (e.message === 'timeout_error') showAlert('Hết thời gian chờ. Máy chủ không phản hồi, vui lòng kiểm tra lại mạng.', {title: 'Lỗi mạng', type: 'error'});
+                        else showAlert('Lỗi khi tải file.', {type: 'error'}); 
+                    } finally { toggleLoader(false, 'dl_cloud'); }
                 };
 
                 itemDiv.querySelector('.btn-restore').onclick = async () => {
-                    if (!await showConfirm(`Khôi phục dữ liệu từ ngày: ${displayTitle}?`, 'Khôi phục Cloud', 'info')) return;
-                    toggleLoader(true, 'restore_cloud', 'Đang tải bản sao lưu...');
+                    if (!navigator.onLine) return showAlert('Mất kết nối mạng. Vui lòng kết nối Internet để khôi phục.', {type: 'warning'});
+                    if (!await showConfirm(`Khôi phục dữ liệu từ bản sao lưu ngày:\n${displayTitle}?\n\nLưu ý: Bạn sẽ cần nhập Mật khẩu chính của thời điểm đó.`, 'Khôi phục từ Cloud Storage', 'info')) return;
+                    
+                    toggleLoader(true, 'restore_cloud', 'Đang đọc file Cloud Storage...');
                     try {
                         const url = await withTimeout(getDownloadURL(itemRef), 15000);
                         const response = await withTimeout(fetch(url), 15000);
                         const imported = JSON.parse(await response.text());
                         const dataArr = Array.isArray(imported) ? imported : imported.data;
                         const verify = dataArr.find(x => x && x[CHECK_KEY]);
-                        if (!verify) throw new Error("File đám mây không chứa khóa xác thực hợp lệ.");
+                        if (!verify) throw new Error("File trên Cloud Storage bị hỏng hoặc không chứa khóa xác thực hợp lệ.");
                         validateImportSchema(dataArr);
                         toggleLoader(false, 'restore_cloud');
                         
-                        const m = await showPrompt('Vui lòng nhập mật khẩu của bản sao lưu này:', 'Mật khẩu...', 'Giải mã khôi phục', 'password', 'info');
+                        const m = await showPrompt('Vui lòng nhập mật khẩu của bản sao lưu này để khôi phục.', 'Nhập mật khẩu...', 'Khôi phục Dữ liệu', 'password', 'info');
                         if (!m) return;
                         if(await SecureCrypto.decryptSafe(verify[CHECK_KEY], m) !== CHECK_VALUE) { 
-                            registerMasterFail(); return showAlert('Sai mật khẩu.', {type:'error'}); 
+                            registerMasterFail(); return showAlert('Mật khẩu không chính xác.', {type:'error'}); 
                         } 
                         resetMasterFail();
-                        if(!await showConfirm('Dữ liệu hiện tại sẽ bị GHI ĐÈ. Tiếp tục?', 'Cảnh báo Nguy hiểm', 'error')) return;
+                        if(!await showConfirm('Hành động này sẽ XÓA VĨNH VIỄN dữ liệu hiện tại trên tất cả thiết bị và thay thế bằng dữ liệu từ bản sao lưu này. Bạn có chắc chắn muốn tiếp tục?', 'Cảnh báo Nguy hiểm', 'error')) return;
                         
-                        toggleLoader(true, 'import_cloud', 'Đang khôi phục...');
+                        toggleLoader(true, 'import_cloud', 'Đang khôi phục hệ thống...');
                         const batch = writeBatch(db);
-                        
-                        const dekKeyToUse = await getDEKKey(m, verify);
-                        if (verify.encrypted_display_key) {
-                            const decKey = await SecureCrypto.decryptWithDEK(verify.encrypted_display_key, dekKeyToUse);
-                            if (decKey) systemEncryptKey = decKey;
-                        }
 
                         batch.set(doc(db, "auth_system", "verify"), { value: verify[CHECK_KEY], encrypted_dek: verify.encrypted_dek });
                         (await getDocs(collection(db, "authenticator"))).forEach(d => batch.delete(d.ref));
@@ -1952,15 +2046,12 @@
                         let recordIndex = 0;
                         for (const i of dataArr) {
                             if(!i || i[CHECK_KEY]) continue;
-                            let finalD = i.display || '';
-                            try { if(!await SecureCrypto.decryptSafe(finalD, systemEncryptKey)) finalD = await SecureCrypto.encrypt(String(i.display || ''), systemEncryptKey); } catch{ finalD = await SecureCrypto.encrypt(String(i.display || ''), systemEncryptKey); }
-
                             const fallbackId = getTimestamp() + "_" + (recordIndex++);
                             const newRecordId = String(i.record_id || fallbackId);
 
                             batch.set(doc(db, "authenticator", newRecordId), { 
                                 record_id: newRecordId, 
-                                display: finalD, 
+                                display: i.display || '', 
                                 secret: String(i.secret || ''), 
                                 update: parseInt(i.update, 10) || parseInt(getTimestamp(), 10) 
                             });
@@ -1968,26 +2059,38 @@
                         await batch.commit();
                         activeDEKKey = null; if (typeof updateLockUI === 'function') updateLockUI();
                         elCloud.modal.classList.remove('open');
-                        showToast('Khôi phục Cloud thành công!', 'success');
-                    } catch (e) { showAlert('Lỗi khôi phục: ' + e.message, {type: 'error'}); } finally { toggleLoader(false, 'restore_cloud'); toggleLoader(false, 'import_cloud'); }
+                        showToast('Dữ liệu từ Cloud Storage đã được khôi phục thành công!', 'success');
+                    } catch (e) { 
+                        toggleLoader(false, 'restore_cloud'); toggleLoader(false, 'import_cloud');
+                        if (e.message === 'timeout_error') showAlert('Hết thời gian chờ. Máy chủ không phản hồi, vui lòng kiểm tra lại mạng.', {title: 'Lỗi mạng', type: 'error'});
+                        else showAlert(getFriendlyErrorMessage(e), { title: 'Lỗi khôi phục', type:'error' }); 
+                    }
                 };
 
                 itemDiv.querySelector('.btn-delete').onclick = async () => {
+                    if (!navigator.onLine) return showAlert('Mất kết nối mạng. Vui lòng kết nối Internet để xóa.', {type: 'warning'});
                     const verify = data.find(e => e[CHECK_KEY]);
-                    if (!verify) return showAlert('Chưa thiết lập khóa bảo mật.', {type: 'error'});
-                    const m = await showPrompt(`Nhập mật khẩu chính để xóa bản sao lưu: ${displayTitle}`, 'Mật khẩu...', 'Xác thực xóa', 'password', 'warning');
+                    if (!verify) return showAlert('Hệ thống chưa thiết lập khóa bảo mật.', {type: 'error'});
+                    
+                    const m = await showPrompt(`Bạn đang muốn XÓA VĨNH VIỄN bản sao lưu ngày:\n${displayTitle}\n\nVui lòng nhập Mật khẩu chính để xác nhận hành động này.`, 'Nhập Mật khẩu chính...', 'Xác thực xóa sao lưu', 'password', 'warning');
                     if (!m) return;
                     if (await SecureCrypto.decryptSafe(verify[CHECK_KEY], m) !== CHECK_VALUE) { 
-                        registerMasterFail(); return showAlert('Sai mật khẩu.', {type: 'error'}); 
+                        registerMasterFail(); return showAlert('Mật khẩu chính không chính xác. Đã hủy thao tác xóa.', {type: 'error'}); 
                     } 
                     resetMasterFail();
-                    toggleLoader(true, 'del_cloud', 'Đang xóa...');
+                    
+                    if (!navigator.onLine) return showAlert('Kết nối mạng đã bị ngắt. Vui lòng thử lại sau.', {type: 'error'});
+
+                    toggleLoader(true, 'del_cloud', 'Đang xóa bản sao lưu...');
                     try {
                         await withTimeout(deleteObject(itemRef), 15000);
                         itemDiv.remove();
                         if (elCloud.list.children.length === 0) elCloud.list.innerHTML = '<div class="text-center py-6 text-slate-400">Chưa có bản sao lưu nào.</div>';
-                        showToast('Đã xóa bản sao lưu.', 'success');
-                    } catch (e) { showAlert('Lỗi khi xóa.', {type: 'error'}); } finally { toggleLoader(false, 'del_cloud'); }
+                        showToast('Đã xóa vĩnh viễn bản sao lưu trên Cloud Storage.', {type: 'success'});
+                    } catch (e) { 
+                        if (e.message === 'timeout_error') showAlert('Hết thời gian chờ. Máy chủ không phản hồi, vui lòng kiểm tra lại mạng.', {title: 'Lỗi mạng', type: 'error'});
+                        else showAlert('Lỗi khi xóa file. Vui lòng thử lại sau.', {type: 'error'}); 
+                    } finally { toggleLoader(false, 'del_cloud'); }
                 };
 
                 elCloud.list.appendChild(itemDiv);
@@ -1995,7 +2098,7 @@
             lucide.createIcons({root: elCloud.list});
 
         } catch (error) {
-            elCloud.list.innerHTML = '<div class="text-center py-6 text-rose-500">Lỗi lấy dữ liệu Cloud.</div>';
+            elCloud.list.innerHTML = '<div class="text-center py-6 text-rose-500">Lỗi khi lấy dữ liệu Cloud Storage.</div>';
         }
     };
 
@@ -2003,20 +2106,19 @@
     elCloud.btnX.onclick = elCloud.btnClose.onclick = () => openCloudBackupManager(false);
 
     el.miReset.onclick = async () => {
-      closeMenuModal(); if (!navigator.onLine) return showAlert('Cần kết nối mạng!', {type: 'warning'});
+      closeMenuModal(); if (!navigator.onLine) return showAlert('Vui lòng kết nối mạng (WiFi/4G) để xóa toàn bộ dữ liệu!', {type: 'warning'});
       const dekKey = await requireDEK('xóa TOÀN BỘ dữ liệu'); if (!dekKey) return;
-      if(!await showConfirm('Dữ liệu không thể khôi phục. Tiếp tục?', 'Cảnh báo', 'error')) return;
-      toggleLoader(true, 'reset', 'Đang xóa...');
+      if(!await showConfirm('Lưu ý: Dữ liệu sau khi xóa sẽ không thể khôi phục. Bạn vẫn muốn tiếp tục?', 'Bước cuối cùng', 'error')) return;
+      toggleLoader(true, 'reset', 'Đang xóa dữ liệu...');
       try {
           const batch = writeBatch(db); (await getDocs(collection(db, "authenticator"))).forEach(d => batch.delete(d.ref)); batch.delete(doc(db, "auth_system", "verify")); await batch.commit(); 
-          activeDEKKey = null; if (typeof updateLockUI === 'function') updateLockUI(); toggleLoader(false, 'reset'); showToast('Đã xóa.', 'success');
-      } catch (e) { toggleLoader(false, 'reset'); await showAlert(getFriendlyErrorMessage(e), {type:'error'}); }
+          activeDEKKey = null; if (typeof updateLockUI === 'function') updateLockUI(); toggleLoader(false, 'reset'); showToast('Toàn bộ dữ liệu đã được xóa khỏi hệ thống.', 'success');
+      } catch (e) { toggleLoader(false, 'reset'); await showAlert(getFriendlyErrorMessage(e), { title: 'Không thể xóa', type:'error' }); }
     };
     
     el.miAbout.onclick = ()=>{ closeMenuModal(); el.aboutModal.classList.add('open'); }; el.aboutX.onclick = el.aboutClose.onclick = () => el.aboutModal.classList.remove('open');
     el.installX.onclick = el.installLater.onclick = () => el.installModal.classList.remove('open');
     
-    // --- PWA & SERVICE WORKER ---
     let defPrompt; 
     window.addEventListener('beforeinstallprompt', e => { 
         e.preventDefault(); 
@@ -2059,7 +2161,7 @@
         }
     });
 
-    window.addEventListener('appinstalled', () => showToast('Đã thêm EncyAuth vào màn hình chính.', 'success'));
+    window.addEventListener('appinstalled', () => showToast('Ứng dụng đã được thêm vào màn hình chính thành công.', 'success'));
 
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', async () => {
@@ -2069,10 +2171,9 @@
       });
     }
 
-    // --- NETWORK STATUS LOGIC ---
     window.addEventListener('offline', () => {
         if (currentUserUid && el.connectionStatus && el.connectionWrapper) {
-            el.connectionStatus.textContent = "Đang hoạt động ngoại tuyến";
+            el.connectionStatus.textContent = "Đang dùng ngoại tuyến (Offline)";
             el.connectionWrapper.classList.replace('text-teal-100/90', 'text-amber-200');
             el.connectionWrapper.classList.replace('bg-white/10', 'bg-amber-900/40');
             const oldIcon = document.getElementById('connection-icon'); if (oldIcon) oldIcon.remove();
@@ -2089,7 +2190,7 @@
 
     window.addEventListener('online', () => {
         if (currentUserUid && el.connectionStatus && el.connectionWrapper) {
-            el.connectionStatus.textContent = "Đã kết nối máy chủ an toàn";
+            el.connectionStatus.textContent = "Đã kết nối máy chủ";
             el.connectionWrapper.classList.replace('text-amber-200', 'text-teal-100/90');
             el.connectionWrapper.classList.replace('bg-amber-900/40', 'bg-white/10');
             const oldIcon = document.getElementById('connection-icon'); if (oldIcon) oldIcon.remove();
