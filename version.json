@@ -4,11 +4,30 @@
   "website": "https://encypass.github.io/",
   "author": "Hoàng Đợi",
   "latest": {
-    "version": "v1.0.2",
-    "release_date": "2026-10-06",
-    "summary": "Bản cập nhật nâng cấp bảo mật toàn diện, tối ưu hóa hiệu suất hệ thống và cải thiện trải nghiệm người dùng."
+    "version": "v1.0.4",
+    "release_date": "2026-10-17",
+    "summary": "Bản cập nhật lớn bổ sung tính năng tự động sao lưu lên Cloud, tăng cường độ ổn định cho trình duyệt khắt khe và nâng cấp toàn diện trải nghiệm bảo mật."
   },
   "changelog": [
+    {
+      "version": "v1.0.4",
+      "release_date": "2026-10-17",
+      "changes": [
+        "Tự động sao lưu đám mây: Hệ thống sẽ tự động tạo và mã hóa bản sao lưu đẩy lên Cloud Storage ngay sau khi Thêm hoặc Sửa tài khoản (nếu có mạng).",
+        "Nâng cấp bảo mật cốt lõi: Bắt buộc ứng dụng chạy trên môi trường mã hóa (HTTPS/Secure Context). Khi ứng dụng khóa, tự động đóng mọi Modal nhạy cảm và xóa sạch dữ liệu đang nhập dở.",
+        "Tăng cường độ ổn định (Fallback): Bổ sung cơ chế dự phòng cho bộ nhớ cache của Firestore và chức năng sao chép (Clipboard), giúp ứng dụng hoạt động trơn tru ngay cả trong Chế độ ẩn danh hoặc trình duyệt chặn quyền.",
+        "Tối ưu hóa UX/UI: Hỗ trợ mã TOTP chu kỳ động, màn hình chặn thông minh khi khởi động không có mạng, và tự động ẩn/hiện các công cụ tùy theo trạng thái dữ liệu người dùng."
+      ]
+    },
+    {
+      "version": "v1.0.3",
+      "release_date": "2026-10-06",
+      "changes": [
+        "Khắc phục hiệu ứng thanh tiến trình (Progress Bar): Tắt chuyển động phản hồi khi thanh tiến trình TOTP reset về mốc 30 giây, giúp loại bỏ hoàn toàn hiện tượng giật ngược (glitch).",
+        "Tự động chuẩn hóa dữ liệu nhập: Hỗ trợ tự động chuyển chữ hoa và loại bỏ khoảng trắng thừa ngay khi người dùng gõ hoặc dán mã Secret Key.",
+        "Cải thiện trải nghiệm đóng/mở Modal: Xử lý sạch sẽ trạng thái gợi ý mật khẩu và làm gọn logic kiểm tra schema dữ liệu."
+      ]
+    },
     {
       "version": "v1.0.2",
       "release_date": "2026-10-06",
