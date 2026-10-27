@@ -1,5 +1,5 @@
-/* sw.js - 1.0.4 (EncyAuth) */
-const APP_VERSION = '1.0.4';
+/* sw.js - 1.0.5 (EncyAuth) */
+const APP_VERSION = '1.0.5';
 const CACHE_STATIC = `static-encyauth-${APP_VERSION}`;
 const BASE = '/';
 const VERSION_FILE = BASE + 'version.json';

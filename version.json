@@ -4,11 +4,19 @@
   "website": "https://encypass.github.io/",
   "author": "Hoàng Đợi",
   "latest": {
-    "version": "v1.0.4",
-    "release_date": "2026-10-17",
-    "summary": "Bản cập nhật lớn bổ sung tính năng tự động sao lưu lên Cloud, tăng cường độ ổn định cho trình duyệt khắt khe và nâng cấp toàn diện trải nghiệm bảo mật."
+    "version": "v1.0.5",
+    "release_date": "2026-10-26",
+    "summary": "Tối ưu hóa hiệu suất hệ thống, cải thiện tốc độ phản hồi và sửa một số lỗi nhỏ giúp ứng dụng hoạt động mượt mà, ổn định hơn."
   },
   "changelog": [
+    {
+      "version": "v1.0.5",
+      "release_date": "2026-10-26",
+      "changes": [
+        "Tối ưu hóa hiệu suất: Cải thiện tốc độ xử lý, giảm thời gian phản hồi của giao diện và tối ưu tài nguyên hệ thống.",
+        "Sửa lỗi nhỏ: Khắc phục một số vấn đề nhỏ phát sinh liên quan đến hiển thị và quá trình đồng bộ dữ liệu."
+      ]
+    },
     {
       "version": "v1.0.4",
       "release_date": "2026-10-17",
